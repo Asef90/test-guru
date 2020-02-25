@@ -5,12 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-(1..5).each { |i| Category.create(title: "Category #{i}") }
+CATEGORY_RANGE = (1..5).freeze
+TQA_RANGE = (1..3).freeze
 
-(0..14).each { |i| Test.create(title: "Test #{i + 1}", level: (i % 3 + 1), category_id: (i / 3 + 1)) }
+category, test, question = [0, 0, 0]
+num_a, num_q, num_t = [0, 0, 0]
 
-(0..44).each { |i| Question.create(body: "Question #{i + 1}", test_id: (i / 3 + 1)) }
+CATEGORY_RANGE.each do |i|
+  num_c = i
+  category = Category.create(title: "Category #{num_c}")
 
-(0..134).each { |i| Answer.create(body: "Answer #{i + 1}", correct: (i % 3 == 0), question_id: (i / 3 + 1)) }
+  TQA_RANGE.each do
+    num_t += 1
+    test = Test.create(title: "Test #{num_t}", level: (num_t % 3 + 1), category_id: category.id)
+
+    TQA_RANGE.each do
+      num_q += 1
+      question = Question.create(body: "Question #{num_q}", test_id: test.id)
+
+      TQA_RANGE.each do
+        num_a += 1
+        Answer.create(body: "Answer #{num_a}", correct: (num_a % 3).zero?, question_id: question.id)
+      end
+    end
+  end
+end
 
 (1..5).each { |i| User.create(name: "User #{i}", age: (i + 10)) }
