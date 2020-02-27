@@ -11,13 +11,15 @@ TQA_RANGE = (1..3).freeze
 category, test, question = [0, 0, 0]
 num_a, num_q, num_t = [0, 0, 0]
 
+(1..15).each { |i| User.create(name: "User #{i}", age: (i + 10)) }
+
 CATEGORY_RANGE.each do |i|
   num_c = i
   category = Category.create(title: "Category #{num_c}")
 
   TQA_RANGE.each do
     num_t += 1
-    test = Test.create(title: "Test #{num_t}", level: (num_t % 3 + 1), category_id: category.id)
+    test = Test.create(title: "Test #{num_t}", level: (num_t % 3 + 1), category_id: category.id, author_id: 16 - num_t)
 
     TQA_RANGE.each do
       num_q += 1
@@ -31,4 +33,4 @@ CATEGORY_RANGE.each do |i|
   end
 end
 
-(1..5).each { |i| User.create(name: "User #{i}", age: (i + 10)) }
+
