@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_02_27_003550) do
   create_table "test_passages", id: false, force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "test_id", null: false
-    t.index ["user_id", "test_id"], name: "index_test_passages_on_user_id_and_test_id", unique: true
+    t.index ["user_id", "test_id"], name: "index_test_passages_on_user_id_and_test_id"
   end
 
   create_table "tests", force: :cascade do |t|
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2020_02_27_003550) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "author_id", null: false
-    t.index ["author_id"], name: "index_tests_on_author_id", unique: true
+    t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
   end
 
