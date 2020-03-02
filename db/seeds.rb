@@ -11,7 +11,7 @@ TQA_RANGE = (1..3).freeze
 category, test, question = [0, 0, 0]
 num_a, num_q, num_t = [0, 0, 0]
 
-(1..15).each { |i| User.create(name: "User #{i}", age: (i + 10)) }
+(1..15).each { |i| User.create(name: "User #{i}", age: (i + 10), email: "#{i}@test.ru") }
 
 CATEGORY_RANGE.each do |i|
   num_c = i
