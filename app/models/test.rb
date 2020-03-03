@@ -13,12 +13,9 @@ class Test < ApplicationRecord
   scope :medium, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
   scope :by_level, ->(level) { where(level: level) }
-  scope :tests_by_category, lambda { |category|
-                              joins(:category).where(categories: { title: category })
-                                              .order(title: :desc)
-                            }
+  scope :tests_by_category, ->(category) { joins(:category).where(categories: { title: category }) }
 
   def self.titles_by_category(category)
-    tests_by_category(category).pluck(:title)
+    tests_by_category(category).order(title: :desc).pluck(:title)
   end
 end
