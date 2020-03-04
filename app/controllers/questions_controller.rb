@@ -1,11 +1,12 @@
 class QuestionsController < ApplicationController
-  before_action :find_all_questions, only: %i[index create]
+  before_action :find_test, only: %i[index create]
   before_action :find_question, only: %i[show delete]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
+  rescue_from ActiveRecord::RecordInvalid, with: :rescue_with_question_invalid
 
   def index
-    result = @questions.map { |q| q.body }
+    result = all_questions.map { |q| q.body }
     render plain: result.join("\n")
   end
 
@@ -14,7 +15,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    question = @questions.create(question_params)
+    question = all_questions.create!(question_params)
     render plain: question.body
   end
 
@@ -33,8 +34,12 @@ class QuestionsController < ApplicationController
     params.require(:question).permit(:body)
   end
 
-  def find_all_questions
-    @questions = Test.find(params[:test_id]).questions
+  def find_test
+    @test = Test.find(params[:test_id])
+  end
+
+  def all_questions
+    @test.questions
   end
 
   def find_question
@@ -45,4 +50,7 @@ class QuestionsController < ApplicationController
     render plain: "Question not found"
   end
 
+  def rescue_with_question_invalid
+    render plain: "Invalid question"
+  end
 end
