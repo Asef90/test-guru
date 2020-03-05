@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[create new]
+  before_action :find_test, only: %i[index create new]
   before_action :find_question, only: %i[show edit update destroy]
   before_action :find_current_test, only: %i[show destroy]
 
