@@ -1,6 +1,7 @@
 module QuestionsHelper
 
-  def question_header
-    "#{action_name.capitalize} #{@question.test.title} Question"
+  def question_header(question)
+    action_title = action_name == 'new' ? "Create new" : "Edit"
+    "#{action_title} #{question.test.title} question"
   end
 end
