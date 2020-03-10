@@ -1,4 +1,6 @@
 class TestPassage < ApplicationRecord
+  SUCCESS_RESULT = 85
+
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
@@ -20,6 +22,10 @@ class TestPassage < ApplicationRecord
 
   def result
     correct_questions * 100.0 / test.questions.count
+  end
+
+  def success?
+    result >= SUCCESS_RESULT
   end
 
   def question_num
