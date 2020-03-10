@@ -2,16 +2,16 @@
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
-  </p><br>
+  </p>
 
   <p>
     <%= form.label :level %><br>
-    <%= form.number_field :level %>
-  </p><br>
+    <%= form.number_field :level, in: 0..Float::INFINITY %>
+  </p>
 
   <p>
-    <%= form.label :category %>
-    <%= form.collection_select :category_id, Category.all, :id, :title %>
+    <%= form.label :category %><br>
+    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
   </p>
 
   <p>
