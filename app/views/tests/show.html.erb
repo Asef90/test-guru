@@ -1,12 +1,9 @@
 <h1>Test "<%= @test.title %>"</h1>
+
 <%= link_to 'New question', new_test_question_path(@test) %>
+
 <h2>Total <%= pluralize(@test.questions.count, 'question') %>:</h2>
-<% @test.questions.each do |question| %>
-  <p><%= question.body %></p>
-  <%= link_to 'Show', question %>
-  <%= link_to 'Edit', edit_question_path(question) %>
-  <%= link_to 'Delete',
-              question,
-              method: :delete,
-              data: { confirm: "Are tou sure?" } %>
-<% end %>
+
+<%= render @test.questions %>
+
+<p><%= link_to 'Back', tests_path %></p>
