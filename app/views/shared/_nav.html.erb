@@ -1,3 +1,6 @@
 <div>
   <%= link_to 'All tests', tests_path %>
+  <% if logged_in? %>
+    <p class="nav user">Welcome, <b><%= current_user.name %></b> Guru</p>
+  <% end %>
 </div>

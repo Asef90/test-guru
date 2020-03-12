@@ -1,4 +1,5 @@
 class TestsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_test, only: %i[show edit update destroy start]
   before_action :find_user, only: :start
 
@@ -12,14 +13,14 @@ class TestsController < ApplicationController
   end
 
   def new
-    @test = Test.new
+    @test = @user.created_tests.new
   end
 
   def edit
   end
 
   def create
-    @test = Test.new(test_params)
+    @test = @user.created_tests.new(test_params)
     if @test.save
       redirect_to @test
     else
