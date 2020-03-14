@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :authenticate_user!
 
   helper_method :current_user,
                 :logged_in?
@@ -7,6 +8,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless current_user
+      session[:request_path] = request.path
       redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please'
     end
   end

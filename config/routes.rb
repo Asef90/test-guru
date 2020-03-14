@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   get :login, to: 'sessions#new'
 
   resources :users, only: :create
-  resources :sessions, only: :create
+  resources :sessions, only: :create do
+    member do
+      post :destroy
+    end
+  end
 
   resources :tests do
     resources :questions, shallow: true, except: :index do

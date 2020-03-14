@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  EMAIL_FORMAT = /\A\S+@\w+\.\w{2,6}\z/i
 
   has_many :created_tests, foreign_key: :author_id, class_name: 'Test'
   has_many :test_passages
@@ -6,7 +7,9 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  validates :email, presence: true
+  validates :email, presence: true,
+                    uniqueness: true,
+                    format: EMAIL_FORMAT
 
   def test_passage(test)
     test_passages.where(test_id: test.id).last
