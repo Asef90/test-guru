@@ -1,3 +1,13 @@
 <div>
-  <%= link_to 'All tests', tests_path %>
+  <% if logged_in? %>
+    <%= link_to 'All tests', tests_path %>
+    <p class="nav user">Welcome, <b><%= current_user.name %></b> Guru<br>
+    <%= link_to 'Log out', session_path(@current_user), method: :post %>
+    </p>
+  <% end %>
+
+  <% unless logged_in? %>
+    <%= link_to 'New user', signup_path %>
+  <% end %>
+
 </div>
