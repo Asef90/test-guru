@@ -1,9 +1,0 @@
-<h1>Test "<%= @test.title %>"</h1>
-
-<%= link_to 'New question', new_test_question_path(@test) %>
-
-<h2>Total <%= pluralize(@test.questions.count, 'question') %>:</h2>
-
-<%= render @test.questions %>
-
-<p><%= link_to 'Back', tests_path %></p>
