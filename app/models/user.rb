@@ -13,6 +13,10 @@ class User < ApplicationRecord
   has_many :test_passages
   has_many :tests, through: :test_passages
 
+  def admin?
+    is_a?(Admin)
+  end
+
   def test_passage(test)
     test_passages.where(test_id: test.id).last
   end
