@@ -30,4 +30,97 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+    select:
+      test:
+        prompt: "Please select"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+    footer:
+      author: "%{year} Asef Kaibov"
+      project: "Learning project at "
+    nav:
+      all_tests: "All tests"
+      logout: "Log out"
+      new_user: "New user"
+      welcome_html: "Welcome <b>%{name}</b> Guru"
+
+  tests:
+    index:
+      header: "Tests"
+      title: "Title"
+      level: "Level"
+      actions: "Actions"
+    test:
+      start: "Start"
+
+  test_passages:
+    show:
+      header: "Passing the %{title} Test"
+      counter:
+        one: "%{num} of %{count} question"
+        other: "%{num} of %{count} questions"
+    success:
+      header: "The %{title} test was passed!"
+      total: "%{result} % correct answers."
+    failure:
+      header: "The %{title} test was failed!"
+      total: "%{result} % correct answers."
+    form:
+      next: "Next"
+
+  admin:
+    tests:
+      index:
+        header: "Tests"
+        new_test: "New test"
+        title: "Title"
+        level: "Level"
+        actions: "Actions"
+      create:
+        success: "Test was successfully created."
+      update:
+        success: "Test was successfully updated."
+      destroy:
+        success: "Test was successfully deleted."
+      show:
+        header: "Test %{title}"
+        new_question: "New question"
+        total:
+          one: "Total %{count} question"
+          other: "Total %{count} questions"
+        back: "Back"
+      new:
+        create: "Create new test"
+        back: "Back"
+      edit:
+        edit: "Edit test"
+        back: "Back"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+
+  users:
+    sessions:
+      create:
+        greeting: "Hello %{first_name} %{last_name}"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+

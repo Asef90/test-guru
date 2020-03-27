@@ -1,7 +1,7 @@
 <div>
   <small>
-    <p><%= current_year %> Asef Kaibov</p>
+    <p><%= t('.author', year: current_year) %></p>
     <%= github_url('Asef90', 'test-guru') %>
-    <p>Learning Project at <%= link_to 'Thinknetica Online School', 'http://thinknetica.com' %>
+    <p><%= t('.project') %> <%= link_to 'Thinknetica Online School', 'http://thinknetica.com'%></p>
   </small>
 </div>
