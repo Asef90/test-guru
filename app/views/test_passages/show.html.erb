@@ -1,7 +1,11 @@
-<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-6">
+    <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
-<b><%= t('.counter', num: @test_passage.question_num, count: @test_passage.test.questions.count) %></b>
-<p><b><%= @test_passage.current_question.body %></b></p>
+    <%= t('.counter', num: @test_passage.question_num, count: @test_passage.test.questions.count) %>
+    <h3><b><%= @test_passage.current_question.body %></b></h3>
 
-<%= render 'form' %>
+    <%= render 'form' %>
+  </div>
+</div>
 

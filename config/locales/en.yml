@@ -53,9 +53,9 @@ en:
       author: "%{year} Asef Kaibov"
       project: "Learning project at "
     nav:
-      all_tests: "All tests"
       logout: "Log out"
       new_user: "New user"
+      admin_mode: "Admin Mode"
       welcome_html: "Welcome <b>%{name}</b> Guru"
 
   tests:
@@ -83,6 +83,11 @@ en:
       next: "Next"
 
   admin:
+    nav:
+      welcome_html: "Welcome <b>%{name}</b> Guru"
+      user_mode: "User Mode"
+      logout: "Log out"
+
     tests:
       index:
         header: "Tests"
@@ -114,6 +119,14 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirm: "Are you sure?"
+
+    questions:
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+
 
   users:
     sessions:
