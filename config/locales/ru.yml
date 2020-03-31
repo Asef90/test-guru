@@ -23,9 +23,9 @@ ru:
       author: "%{year} Асеф Каибов"
       project: "Учебный проект на "
     nav:
-      all_tests: "Все тесты"
       logout: "Выйти"
       new_user: "Зарегистрироваться"
+      admin_mode: "Режим Админа"
       welcome_html: "Приветствуем, Гуру <b>%{name}</b>"
 
   tests:
@@ -56,6 +56,11 @@ ru:
 
 
   admin:
+    nav:
+      welcome_html: "Приветствуем, Гуру <b>%{name}</b>"
+      user_mode: "Режим Пользователя"
+      logout: "Выйти"
+
     tests:
       index:
         header: "Тесты"
@@ -85,6 +90,13 @@ ru:
         edit: "Редактировать тест"
         back: "Назад"
       test:
+        show: "Открыть"
+        edit: "Изменить"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+
+    questions:
+      question:
         show: "Открыть"
         edit: "Изменить"
         delete: "Удалить"

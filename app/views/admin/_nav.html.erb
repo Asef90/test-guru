@@ -1,0 +1,11 @@
+<nav class="navbar navbar-dark bg-primary mb-3">
+  <%= link_to 'TestGuru Admin Panel', admin_tests_path, class: 'navbar-brand' %>
+
+  <span class="navbar-text">
+    <% if user_signed_in? %>
+      <%= link_to t('.user_mode'), root_path %><br>
+      <%= t('.welcome_html', name: current_user.first_name) %> |
+      <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
+    <% end %>
+
+</nav>
