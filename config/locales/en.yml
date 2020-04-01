@@ -81,6 +81,8 @@ en:
       total: "%{result} % correct answers."
     form:
       next: "Next"
+    gist:
+      failure: "An error occurred while saving gist"
 
   admin:
     nav:
@@ -136,4 +138,6 @@ en:
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
+
+  description: "A question about %{title} from TestGuru"
 

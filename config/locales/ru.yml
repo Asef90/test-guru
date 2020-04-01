@@ -53,6 +53,8 @@ ru:
       total: "%{result} % правильных ответов."
     form:
       next: 'Далее'
+    gist:
+      failure: 'Во время сохранения gist произошла ошибка'
 
 
   admin:
@@ -110,4 +112,7 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+
+  description: "Вопрос по тесту %{title} на TestGuru"
 
