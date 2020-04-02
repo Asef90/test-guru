@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_02_025857) do
+ActiveRecord::Schema.define(version: 2020_04_02_044112) do
 
   create_table "answers", force: :cascade do |t|
     t.string "body", null: false
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_04_02_025857) do
   create_table "gists", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "question_id", null: false
-    t.string "hash"
+    t.string "gist_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["question_id"], name: "index_gists_on_question_id"

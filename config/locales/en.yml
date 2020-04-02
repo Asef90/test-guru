@@ -97,6 +97,7 @@ en:
         title: "Title"
         level: "Level"
         actions: "Actions"
+        all_gists: "All gists"
       create:
         success: "Test was successfully created."
       update:
@@ -128,6 +129,13 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirm: "Are you sure?"
+
+    gists:
+      index:
+        header: "All gists"
+        question: "Question"
+        gist_url: "Gist Url"
+        user_email: "User email"
 
 
   users:

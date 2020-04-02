@@ -23,6 +23,10 @@ class User < ApplicationRecord
     test_passages.where(test_id: test.id).last
   end
 
+  def gist(question)
+    gists.where(question_id: question.id).last
+  end
+
   def passed_tests(level)
     tests.by_level(level)
   end
