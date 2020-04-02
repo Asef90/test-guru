@@ -81,6 +81,8 @@ en:
       total: "%{result} % correct answers."
     form:
       next: "Next"
+    gist:
+      failure: "An error occurred while saving gist"
 
   admin:
     nav:
@@ -95,6 +97,7 @@ en:
         title: "Title"
         level: "Level"
         actions: "Actions"
+        all_gists: "All gists"
       create:
         success: "Test was successfully created."
       update:
@@ -127,6 +130,13 @@ en:
         delete: "Delete"
         confirm: "Are you sure?"
 
+    gists:
+      index:
+        header: "All gists"
+        question: "Question"
+        gist_url: "Gist Url"
+        user_email: "User email"
+
 
   users:
     sessions:
@@ -136,4 +146,6 @@ en:
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
+
+  gist_description: "A question about %{title} from TestGuru"
 

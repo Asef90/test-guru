@@ -6,6 +6,6 @@
   <% else %>
     <div class="alert alert-<%= key %>" role="alert">
   <% end %>
-      <%= content_tag :p, message %>
+      <%= content_tag :p, message.html_safe %>
     </div>
 <% end %>

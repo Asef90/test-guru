@@ -53,6 +53,8 @@ ru:
       total: "%{result} % правильных ответов."
     form:
       next: 'Далее'
+    gist:
+      failure: 'Во время сохранения gist произошла ошибка'
 
 
   admin:
@@ -68,6 +70,7 @@ ru:
         title: "Название"
         level: "Уровень"
         actions: "Действия"
+        all_gists: "Список gists"
       create:
         success: "Тест успешно создан."
       update:
@@ -102,6 +105,13 @@ ru:
         delete: "Удалить"
         confirm: "Вы уверены?"
 
+    gists:
+      index:
+        header: "Список gists"
+        question: "Вопрос"
+        gist_url: "Ссылка на gist"
+        user_email: "Email пользователя"
+
   users:
     sessions:
       create:
@@ -110,4 +120,7 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+
+  gist_description: "Вопрос по тесту %{title} на TestGuru"
 
