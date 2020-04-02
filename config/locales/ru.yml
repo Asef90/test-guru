@@ -114,5 +114,5 @@ ru:
       subject: "Вы успешно завершили тест на TestGuru!"
 
 
-  description: "Вопрос по тесту %{title} на TestGuru"
+  gist_description: "Вопрос по тесту %{title} на TestGuru"
 

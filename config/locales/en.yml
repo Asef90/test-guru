@@ -139,5 +139,5 @@ en:
     completed_test:
       subject: "You just completed the TestGuru test!"
 
-  description: "A question about %{title} from TestGuru"
+  gist_description: "A question about %{title} from TestGuru"
 
