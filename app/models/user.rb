@@ -13,7 +13,6 @@ class User < ApplicationRecord
   has_many :test_passages
   has_many :tests, through: :test_passages
   has_many :gists
-  has_many :questions, through: :gists
 
   def admin?
     is_a?(Admin)
@@ -21,10 +20,6 @@ class User < ApplicationRecord
 
   def test_passage(test)
     test_passages.where(test_id: test.id).last
-  end
-
-  def gist(question)
-    gists.where(question_id: question.id).last
   end
 
   def passed_tests(level)

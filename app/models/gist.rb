@@ -4,7 +4,7 @@ class Gist < ApplicationRecord
   belongs_to :question
 
   def question_body
-    question.body[0, 25]
+    question.body.truncate(25, omission: '')
   end
 
   def gist_hash
