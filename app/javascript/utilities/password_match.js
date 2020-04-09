@@ -1,9 +1,7 @@
 document.addEventListener('turbolinks:load', function() {
   var form = document.querySelector('.password-match');
 
-  if (form) {
-    form.oninput = checkPasswordMatch;
-  }
+  if (form) { form.oninput = checkPasswordMatch; }
 })
 
 function checkPasswordMatch() {
@@ -12,9 +10,7 @@ function checkPasswordMatch() {
   var key = this.querySelector('.octicon-key');
 
   if (password_confirm.value) {
-
     var result = compare(password.value, password_confirm.value);
-
     result ? key.setAttribute('fill', 'green') : key.setAttribute('fill', 'red');
 
     key.classList.remove('hide');
