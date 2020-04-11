@@ -2,8 +2,12 @@
   <div class="col col-md">
     <h1><%= t('.header') %></h1>
 
-    <%= link_to t('.new_test'), new_admin_test_path %><br>
-    <%= link_to t('.all_gists'), admin_gists_path %>
+    <p>
+      <%= link_to t('.new_test'), new_admin_test_path %><br>
+      <%= link_to t('.all_gists'), admin_gists_path %>
+    </p>
+
+    <%= render 'shared/errors', resource: @test %>
 
     <table class="table table-striped text-center mt-5">
       <tr>

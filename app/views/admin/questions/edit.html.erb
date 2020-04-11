@@ -1,5 +1,4 @@
 <h1><%= question_header(@question) %></h1>
 
-<%= render 'shared/errors', resource: @question %>
 <%= render 'form' %>
 <%= link_to 'Back', admin_test_path(@question.test) %>
