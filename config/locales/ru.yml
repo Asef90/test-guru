@@ -17,7 +17,7 @@ ru:
       header:
         few: "Обнаружено %{count} ошибки"
         many: "Обнаружено %{count} ошибок"
-        one: "%Обнаружена %{count} ошибка"
+        one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
     footer:
       author: "%{year} Асеф Каибов"
@@ -97,6 +97,8 @@ ru:
         edit: "Изменить"
         delete: "Удалить"
         confirm: "Вы уверены?"
+      form_inline:
+        submit: "ОК"
 
     questions:
       question:
