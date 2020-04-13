@@ -63,10 +63,11 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   config.action_mailer.default_url_options = { host: 'afternoon-garden-79311.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
     :tls => true,
     address: 'smtp.yandex.ru',
-    port: 587,
+    port: 465,
     domain: 'yandex.ru',
     authentication: 'plain',
     user_name: ENV['SMTP_USERNAME'],
