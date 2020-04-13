@@ -66,9 +66,9 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
     :tls => true,
-    address: 'smtp.yandex.ru',
+    address: 'smtp.yandex.com',
     port: 465,
-    domain: 'yandex.ru',
+    domain: 'yandex.com',
     authentication: 'plain',
     user_name: ENV['SMTP_USERNAME'],
     password: ENV['SMTP_PASSWORD'],
