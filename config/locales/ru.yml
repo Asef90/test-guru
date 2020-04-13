@@ -9,6 +9,8 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+      feedback:
+        body: "Отзыв"
     select:
       prompt: "Выберите из списка"
 
@@ -22,6 +24,7 @@ ru:
     footer:
       author: "%{year} Асеф Каибов"
       project: "Учебный проект на "
+      contact: "Обратная связь"
     nav:
       logout: "Выйти"
       new_user: "Зарегистрироваться"
@@ -123,6 +126,10 @@ ru:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
 
-
   gist_description: "Вопрос по тесту %{title} на TestGuru"
+
+  feedbacks:
+    new:
+      header: "Напишите нам"
+      submit: "Отправить"
 
