@@ -40,7 +40,7 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
-    correct_answers_ids.sort.map(&:to_s) == answer_ids.sort
+    correct_answers_ids.sort.map(&:to_s) == answer_ids.to_a.sort
   end
 
   def correct_answers_ids
