@@ -4,4 +4,8 @@ class Question < ApplicationRecord
   belongs_to :test
 
   validates :body, presence: true
+
+  def correct_answers
+    answers.correct.count
+  end
 end

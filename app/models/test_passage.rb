@@ -29,7 +29,8 @@ class TestPassage < ApplicationRecord
   end
 
   def question_num
-    test.questions.ids.index(current_question.id) + 1
+    return test.questions.ids.index(current_question.id) + 1 if test.questions.any?
+    0
   end
 
   private

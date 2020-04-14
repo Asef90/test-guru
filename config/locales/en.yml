@@ -69,6 +69,8 @@ en:
       actions: "Actions"
     test:
       start: "Start"
+    start:
+      no_questions: "No questions for this test. Please choose another one."
 
   test_passages:
     show:
@@ -76,6 +78,8 @@ en:
       counter:
         one: "%{num} of %{count} question"
         other: "%{num} of %{count} questions"
+    update:
+      test_error: "Test error. Please choose another one."
     success:
       header: "The %{title} test was passed!"
       total: "%{result} % correct answers."
