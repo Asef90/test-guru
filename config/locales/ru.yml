@@ -9,6 +9,8 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+      feedback:
+        body: "Отзыв"
     select:
       prompt: "Выберите из списка"
 
@@ -22,6 +24,7 @@ ru:
     footer:
       author: "%{year} Асеф Каибов"
       project: "Учебный проект на "
+      contact: "Обратная связь"
     nav:
       logout: "Выйти"
       new_user: "Зарегистрироваться"
@@ -36,6 +39,8 @@ ru:
       actions: "Действия"
     test:
       start: "Начать"
+    start:
+      no_questions: "В данном тесте отсутствуют вопросы. Пожалуйста выберите другой."
 
   test_passages:
     show:
@@ -45,6 +50,8 @@ ru:
         few: "%{num} из %{count} вопросов"
         many: "%{num} из %{count} вопросов"
         other: "%{num} из %{count} вопросов"
+    update:
+      test_error: "Ошибка в тесте. Пожалуйста выберите другой."
     success:
       header: "Тест %{title} успешно завершён!"
       total: "%{result} % правильных ответов."
@@ -123,6 +130,10 @@ ru:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
 
-
   gist_description: "Вопрос по тесту %{title} на TestGuru"
+
+  feedbacks:
+    new:
+      header: "Напишите нам"
+      submit: "Отправить"
 

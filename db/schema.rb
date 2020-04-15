@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_02_044112) do
+ActiveRecord::Schema.define(version: 2020_04_14_032324) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
     t.string "body", null: false
@@ -28,8 +31,8 @@ ActiveRecord::Schema.define(version: 2020_04_02_044112) do
   end
 
   create_table "gists", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "question_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "question_id", null: false
     t.string "gist_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -98,8 +101,6 @@ ActiveRecord::Schema.define(version: 2020_04_02_044112) do
   add_foreign_key "gists", "questions"
   add_foreign_key "gists", "users"
   add_foreign_key "questions", "tests"
-  add_foreign_key "test_passages", "questions", column: "current_question_id"
-  add_foreign_key "test_passages", "tests"
   add_foreign_key "test_passages", "users"
   add_foreign_key "tests", "categories"
   add_foreign_key "tests", "users", column: "author_id"
