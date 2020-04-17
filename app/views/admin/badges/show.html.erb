@@ -1,0 +1,25 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-6">
+    <h1>Badge</h1>
+
+
+    <div class="card border=primary mb-3 mt-4">
+      <div class="card-body">
+        <h2><%= @badge.title %></h2>
+
+        <p>
+          <image src=<%= "#{@badge.image}" %> alt=<%= "#{@badge.title} image" %> >
+        </p>
+
+        <p>
+          <b>Description</b>
+          <%= @badge.description %>
+        </p>
+      </div>
+    </div>
+
+    <%= link_to 'Back', admin_badges_path %>
+  </div>
+</div>
+
+

@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col col-md">
+    <h1><%= t('.header') %></h1>
+
+    <%= link_to t('.new_badge'), new_admin_badge_path %>
+
+    <table class="table table-striped text-center mt-5">
+      <tr>
+        <th scope="col" class="w-50"><%= t('.title') %></th>
+        <th scope="col"><%= t('.image') %></th>
+        <th scope="col"><%= t('.rule_name') %></th>
+        <th scope="col"><%= t('.rule_value') %></th>
+        <th scope="col" colspan="3"><%= t('.actions') %></th>
+      </tr>
+
+      <%= render @badges %>
+    </table>
+  </div>
+</div>
+
+

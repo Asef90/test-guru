@@ -1,4 +1,4 @@
-module QuestionsHelper
+module Admin::QuestionsHelper
 
   def question_header(question)
     action_title = question.new_record? ? "Create new" : "Edit"

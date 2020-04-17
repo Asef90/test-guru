@@ -13,7 +13,7 @@ class Test < ApplicationRecord
   scope :medium, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
   scope :by_level, ->(level) { where(level: level) }
-  scope :tests_by_category, ->(category) { joins(:category).where(categories: { title: category }) }
+  scope :by_category, ->(category) { includes(:category).where(categories: { title: category }) }
   scope :with_questions, -> { joins(:questions).
                               group("tests.id HAVING count(questions.id) > 0").order(:created_at) }
 

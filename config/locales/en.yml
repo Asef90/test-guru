@@ -67,10 +67,16 @@ en:
       title: "Title"
       level: "Level"
       actions: "Actions"
+      badges: "All badges"
     test:
       start: "Start"
     start:
       no_questions: "No questions for this test. Please choose another one."
+
+  badges:
+    index:
+      header: "All Badges"
+      my_badges: "My Badges"
 
   test_passages:
     show:
@@ -105,6 +111,7 @@ en:
         level: "Level"
         actions: "Actions"
         all_gists: "All gists"
+        all_badges: "All badges"
       create:
         success: "Test was successfully created."
       update:
@@ -118,6 +125,7 @@ en:
           one: "Total %{count} question"
           other: "Total %{count} questions"
         back: "Back"
+        edit: "Edit"
       new:
         create: "Create new test"
         back: "Back"
@@ -146,6 +154,32 @@ en:
         gist_url: "Gist Url"
         user_email: "User email"
 
+    badges:
+      create:
+        success: "Badge was successfully created"
+      update:
+        success: "Badge was successfully updated"
+      destroy:
+        success: "Badge was successfully destroyed"
+      index:
+        header: "All badges"
+        title: "Title"
+        image: "Image"
+        rule_name: "Rule name"
+        rule_value: "Rule value"
+        actions: "Actions"
+        new_badge: "New badge"
+      new:
+        create: "Create new badge"
+        back: "Back"
+      edit:
+        edit: "Edit badge"
+        back: "Back"
+      badge:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
 
   users:
     sessions:

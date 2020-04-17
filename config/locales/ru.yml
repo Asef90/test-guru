@@ -37,10 +37,16 @@ ru:
       title: "Название"
       level: "Уровень"
       actions: "Действия"
+      badges: "Список беджей"
     test:
       start: "Начать"
     start:
       no_questions: "В данном тесте отсутствуют вопросы. Пожалуйста выберите другой."
+
+  badges:
+    index:
+      header: "Все бейджи"
+      my_badges: "Мои бейджи"
 
   test_passages:
     show:
@@ -78,6 +84,7 @@ ru:
         level: "Уровень"
         actions: "Действия"
         all_gists: "Список gists"
+        all_badges: "Список бейджей"
       create:
         success: "Тест успешно создан."
       update:
@@ -93,6 +100,7 @@ ru:
           many: "Всего %{count} вопросов"
           other: "Всего %{count} вопроса"
         back: 'Назад'
+        edit: "Изменить"
       new:
         create: "Создать новый тест"
         back: "Назад"
@@ -120,6 +128,33 @@ ru:
         question: "Вопрос"
         gist_url: "Ссылка на gist"
         user_email: "Email пользователя"
+
+    badges:
+      create:
+        success: "Бейдж успешно создан"
+      update:
+        success: "Бейдж успешно обновлён"
+      destroy:
+        success: "Бейдж успешно удалён"
+      index:
+        header: "Все бейджи"
+        title: "Название"
+        image: "Изображение"
+        rule_name: "Критерий"
+        rule_value: "Значение"
+        actions: "Действия"
+        new_badge: "Создать бейдж"
+      new:
+        create: "Создать новый бейдж"
+        back: "Назад"
+      edit:
+        edit: "Редактировать бейдж"
+        back: "Назад"
+      badge:
+        show: "Открыть"
+        edit: "Изменить"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
 
   users:
     sessions:

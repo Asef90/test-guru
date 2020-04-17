@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col col-md">
+    <h1><%= t('.header') %></h1>
+
+    <table class="table table-striped text-center mt-5">
+      <tr>
+        <th scope="col"><%= t('.title') %></th>
+        <th scope="col"><%= t('.image') %></th>
+        <th scope="col" class="w-50"><%= t('.description') %></th>
+      </tr>
+
+      <%= render @badges %>
+    </table>
+
+
+
+    <table class="table table-striped text-center mt-10">
+      <tr><h2><%= t('.my_badges') %></h2></tr>
+      <tr>
+        <th scope="col"><%= t('.title') %></th>
+        <th scope="col"><%= t('.image') %></th>
+        <th scope="col" class="w-50"><%= t('.description') %></th>
+      </tr>
+
+      <%= render @my_badges %>
+    </table>
+  </div>
+</div>
