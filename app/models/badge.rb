@@ -1,5 +1,5 @@
 class Badge < ApplicationRecord
-  RULE_NAMES = %i[Attempt Category Level]
+  RULE_NAMES = %i[attempt category level]
 
   validates :title, presence: true
   validates :image, presence: true

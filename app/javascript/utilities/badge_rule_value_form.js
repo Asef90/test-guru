@@ -15,12 +15,12 @@ function buildRuleValueForm() {
 
 
   rule_value_control.classList.remove('hide');
-  if (form_value === 'Category') {
+  if (form_value === 'category') {
     rule_value_category.classList.remove('hide');
     rule_value_level.classList.add('hide');
     rule_value_level.disabled = true;
     rule_value_category.disabled = false;
-  } else if (form_value === 'Level') {
+  } else if (form_value === 'level') {
     rule_value_category.classList.add('hide');
     rule_value_level.classList.remove('hide');
     rule_value_category.disabled = true;

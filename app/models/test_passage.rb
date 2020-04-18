@@ -8,10 +8,6 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_first_question, on: :create
   before_update :set_next_question, if: -> { current_question }
 
-  scope :success_tests_by_category, ->(category) { includes(:test).where(tests: { category: category })
-                                                   .where(success: true) }
-  scope :success_tests_by_level, ->(level) { includes(:test).where(tests: { level: level })
-                                             .where(success: true)}
 
   def completed?
     current_question.nil?

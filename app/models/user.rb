@@ -28,7 +28,11 @@ class User < ApplicationRecord
     tests.by_level(level)
   end
 
-  def has_badge(badge)
-    badges.find_by(id: badge.id)
+  def passed_tests_by_category(category_id)
+    tests.tests_by_category(category_id)
+  end
+
+  def has_badge(rule_name, rule_value)
+    badges.find_by(rule_name: rule_name, rule_value: rule_value)
   end
 end
