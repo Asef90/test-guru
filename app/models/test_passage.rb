@@ -6,7 +6,8 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_first_question, on: :create
-  before_update :set_next_question
+  before_update :set_next_question, if: -> { current_question }
+
 
   def completed?
     current_question.nil?

@@ -11,6 +11,7 @@ require("utilities/sorting")
 require("utilities/password_match")
 require("utilities/form_inline")
 require("utilities/progress_bar")
+require("utilities/badge_rule_value_form")
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
