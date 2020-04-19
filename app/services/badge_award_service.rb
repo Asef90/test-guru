@@ -32,7 +32,7 @@ class BadgeAwardService
     false
   end
 
-  def attempt_award?(rule_value = nil)
+  def attempt_award?(_rule_value)
     attempts_number ||= @user.tests.where(id: @test_passage.test_id).count
 
     if attempts_number == 1

@@ -10,7 +10,7 @@ class TestPassage < ApplicationRecord
 
 
   def completed?
-    current_question.nil?
+    current_question.nil? || (time_over? if test.timer)
   end
 
   def accept!(answer_ids)
@@ -35,6 +35,10 @@ class TestPassage < ApplicationRecord
   end
 
   private
+
+  def time_over?
+    Time.now - created_at >= test.timer.minutes
+  end
 
   def before_validation_set_first_question
     self.current_question = test.questions.first if test.present?
