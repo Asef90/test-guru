@@ -34,6 +34,10 @@ class TestPassage < ApplicationRecord
     0
   end
 
+  def finish_time
+    created_at + test.timer.minutes
+  end
+
   private
 
   def time_over?
