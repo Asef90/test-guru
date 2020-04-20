@@ -3,9 +3,7 @@ document.addEventListener('turbolinks:load', function() {
 
 
   if (timerField) {
-    var finishedTime = timerField.dataset.finishTime;
-    var now = new Date();
-    var remainTime = (new Date(finishedTime) - now) / 1000;
+    var remainTime = timerField.dataset.remainTime;
 
     startTimer(remainTime, timerField);
   }

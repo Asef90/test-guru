@@ -3,7 +3,7 @@
     <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
     <%= content_tag :h2, class: "timer-countdown",
-                         data: { finish_time: @test_passage.finish_time.to_s } do %>
+                         data: { remain_time: @test_passage.remain_time.to_s } do %>
     <% end %>
 
     <p>
