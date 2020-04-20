@@ -2,8 +2,10 @@
   <div class="col col-md-6">
     <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
-    <%= content_tag :h2, class: "timer-countdown",
-                         data: { remain_time: @test_passage.remain_time.to_s } do %>
+    <% if @test_passage.test.timer %>
+      <%= content_tag :h2, class: "timer-countdown",
+                           data: { remain_time: @test_passage.remain_time.to_s } do %>
+      <% end %>
     <% end %>
 
     <p>
